@@ -23,20 +23,20 @@ double[,] CreateMatrix(int row, int columns)
 
 void FillandPrintMatrix(double [,]matr)
 {
+    
   for (int i = 0; i < matr.GetLength(0); i++)
   {
     for (int j = 0; j < matr.GetLength(1); j++)
     {
-      matr[i,j] = Random.Shared.Next(0, 10);
-       Console.Write(matr[i,j] + " ");
+      matr[i,j] = Math.Round(new Random().NextDouble(),2);
+      Console.Write( matr[i,j] + " ");
     }
-    Console.WriteLine();
+     Console.WriteLine();
   }
 }
-
-
 
 (int row, int columns) size = GetSizeByUser();
 double[,] matrix = CreateMatrix(size.row, size.columns);
 FillandPrintMatrix(matrix);
+
 
