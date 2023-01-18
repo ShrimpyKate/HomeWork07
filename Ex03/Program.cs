@@ -22,29 +22,31 @@ int[,] GenerateMatrix(int row, int column)
   {
     for (int c = 0; c < column; c++)
     {
-      arr[r, c] = Convert.ToInt32(new Random().Next(0, 100));
+      arr[r, c] = Convert.ToInt32(new Random().Next(0, 20));
+      Console.Write(arr[r, c] + " ");
     }
+    Console.WriteLine();
   }
   return arr;
 }
 
-double Averange(int [,] matr)//, int columns, int rows)
+string Averange(int[,] matr)//, int columns, int rows)
 {
-  int sum = 0;
-  double rez = 0;
+  String rez = "";
+
   for (int c = 0; c < matr.GetLength(1); c++)
   {
+    int sum = 0;
     for (int r = 0; r < matr.GetLength(0); r++)
     {
       sum += matr[r, c];
     }
-      
+    rez += $"{sum / matr.GetLength(0)}; ";
   }
-  rez = sum / matr.GetLength(0);
   return rez;
 }
 
-(int row, int column)size= GetSizeByUser();
-int[,]matrix = GenerateMatrix(size.row, size.column);
-double rez= Averange(matrix);
+(int row, int column) size = GetSizeByUser();
+int[,] matrix = GenerateMatrix(size.row, size.column);
+string rez = Averange(matrix);
 Console.WriteLine(rez);
