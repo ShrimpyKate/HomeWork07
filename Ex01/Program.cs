@@ -23,12 +23,12 @@ double[,] CreateMatrix(int row, int columns)
 
 void FillandPrintMatrix(double [,]matr)
 {
-    
+    Random rand = new Random();
   for (int i = 0; i < matr.GetLength(0); i++)
   {
     for (int j = 0; j < matr.GetLength(1); j++)
     {
-      matr[i,j] = Math.Round(new Random().NextDouble(),2);
+      matr[i,j] = Convert.ToDouble(rand.Next(-10, 100)/10.0);
       Console.Write( matr[i,j] + " ");
     }
      Console.WriteLine();
