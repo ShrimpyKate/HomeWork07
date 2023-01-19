@@ -1,7 +1,9 @@
 ﻿// Напишите программу, которая на вход принимает 
 //позиции элемента в двумерном массиве, и возвращает
 // значение этого элемента или же указание, что такого элемента нет.
+//
 
+//1.set size of matrix
 (int, int) GetSizeByUser()
 {
   int row = Convert.ToInt32(Console.ReadLine());
@@ -9,6 +11,8 @@
   return (row, columns);
 }
 
+
+//2.creat matrix and fill it
 int[,] GenerateMatrix(int rows, int columns)
 {
   int[,] arr = new int[rows, columns];
@@ -22,7 +26,7 @@ int[,] GenerateMatrix(int rows, int columns)
   }
   return arr;
 }
-
+//3.find element of matrix
 int FindElement(int[,] matr, int row, int column)
 {
   if (row >= matr.GetLength(0) || row < 0 || column >= matr.GetLength(1) || column < 0)
@@ -33,7 +37,7 @@ int FindElement(int[,] matr, int row, int column)
   return matr[row, column];
 }
 
-
+//4.print matrix
 void Print2DArray(int[,] matr)
 {
   for (int i = 0; i < matr.GetLength(0); i++)

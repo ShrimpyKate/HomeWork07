@@ -7,6 +7,8 @@
 //8 4 2 4
 //Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
+
+//1.set size of matrix
 (int, int) GetSizeByUser()
 {
   Console.WriteLine("Введите размер массива: ");
@@ -15,6 +17,8 @@
   return (row, column);
 }
 
+
+//2.creat matrix and fill it
 int[,] GenerateMatrix(int row, int column)
 {
   int[,] arr = new int[row, column];
@@ -30,7 +34,7 @@ int[,] GenerateMatrix(int row, int column)
   }
   return arr;
 }
-
+//3. find averenge
 string Averange(int[,] matr)
 {
   String rez = "";
