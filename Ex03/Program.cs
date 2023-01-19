@@ -9,7 +9,7 @@
 
 (int, int) GetSizeByUser()
 {
-   Console.WriteLine("Введите размер массива: ");
+  Console.WriteLine("Введите размер массива: ");
   int row = Convert.ToInt32(Console.ReadLine());
   int column = Convert.ToInt32(Console.ReadLine());
   return (row, column);

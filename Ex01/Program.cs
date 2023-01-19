@@ -12,7 +12,7 @@
   Console.WriteLine("Введите размер массива: ");
   int row = int.Parse(Console.ReadLine());
   int columns = int.Parse(Console.ReadLine());
-return (row, columns);
+  return (row, columns);
 }
 
 double[,] CreateMatrix(int row, int columns)
@@ -21,17 +21,17 @@ double[,] CreateMatrix(int row, int columns)
   return matr;
 }
 
-void FillandPrintMatrix(double [,]matr)
+void FillandPrintMatrix(double[,] matr)
 {
-    Random rand = new Random();
+  Random rand = new Random();
   for (int i = 0; i < matr.GetLength(0); i++)
   {
     for (int j = 0; j < matr.GetLength(1); j++)
     {
-      matr[i,j] = Convert.ToDouble(rand.Next(-10, 100)/10.0);
-      Console.Write( matr[i,j] + " ");
+      matr[i, j] = Convert.ToDouble(rand.Next(-10, 100) / 10.0);
+      Console.Write(matr[i, j] + " ");
     }
-     Console.WriteLine();
+    Console.WriteLine();
   }
 }
 

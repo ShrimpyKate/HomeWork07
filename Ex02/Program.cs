@@ -6,7 +6,7 @@
 {
   int row = Convert.ToInt32(Console.ReadLine());
   int columns = Convert.ToInt32(Console.ReadLine());
-return (row, columns);
+  return (row, columns);
 }
 
 int[,] GenerateMatrix(int rows, int columns)
@@ -17,7 +17,7 @@ int[,] GenerateMatrix(int rows, int columns)
   {
     for (int c = 0; c < columns; c++)
     {
-      arr[r, c] = Convert.ToInt32(new Random().Next(0,100));
+      arr[r, c] = Convert.ToInt32(new Random().Next(0, 100));
     }
   }
   return arr;
