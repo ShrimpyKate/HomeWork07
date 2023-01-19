@@ -9,6 +9,7 @@
 
 (int, int) GetSizeByUser()
 {
+   Console.WriteLine("Введите размер массива: ");
   int row = Convert.ToInt32(Console.ReadLine());
   int column = Convert.ToInt32(Console.ReadLine());
   return (row, column);
@@ -30,7 +31,7 @@ int[,] GenerateMatrix(int row, int column)
   return arr;
 }
 
-string Averange(int[,] matr)//, int columns, int rows)
+string Averange(int[,] matr)
 {
   String rez = "";
 
@@ -49,4 +50,5 @@ string Averange(int[,] matr)//, int columns, int rows)
 (int row, int column) size = GetSizeByUser();
 int[,] matrix = GenerateMatrix(size.row, size.column);
 string rez = Averange(matrix);
+Console.WriteLine("Cреднее арифметическое каждого столбца: ");
 Console.WriteLine(rez);
